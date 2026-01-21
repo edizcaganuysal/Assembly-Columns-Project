@@ -8,6 +8,7 @@ Columns recreated in MIPS assembly for the CSC258 bitmap display. The game runs 
 - `columns.asm` — full game loop, keyboard polling, rendering, collision, matching, gravity, previews, and save logic.
 - `img/` — gameplay captures and diagrams used below.
 - `project_report.pdf` — original project write-up (source for this README).
+- `LICENSE` — license information.
 
 ## Quickstart
 - Environment: Saturn/MARS with the bitmap display mapped to `0x10008000`.
@@ -37,19 +38,12 @@ Columns recreated in MIPS assembly for the CSC258 bitmap display. The game runs 
 ![After matching + gravity](img/after_match.png)
 ![Saved column view](img/saving_column.png)
 
-## Features (Milestones 4 & 5)
-- Gravity timer with accelerating speed
-- Difficulty modes: Easy / Medium / Hard
-- Pause toggle with on-screen freeze
-- Game Over screen with restart flow
+## Feature Highlights
+- Gravity timer with accelerating speed tied to difficulty
+- Pause toggle and Game Over screen with restart flow
 - Next five columns preview panel
 - Save/swap column system
-
-## Milestones Delivered
-- **Milestone 1:** Static border, full bitmap render, initial spawn and preview, verified memory layout.
-- **Milestone 2:** Keyboard polling (WASD + Q), rotation, full redraw each frame with 1 ms sleep.
-- **Milestone 3:** Left/right and vertical collision, lock + respawn, full match detection, gravity, repeat until stable, Game Over on blocked spawn.
-- **Milestones 4 & 5:** Eight easy features (listed above) to finalize gameplay polish.
+- Full match detection (horizontal, vertical, diagonal) with cascading gravity
 
 ## Memory Layout
 - Base address `0x10008000`; 16 units per row (64 bytes).
@@ -66,5 +60,3 @@ Columns recreated in MIPS assembly for the CSC258 bitmap display. The game runs 
 4) `P` pauses/resumes; `Q` quits anytime.
 5) On Game Over, press `R` to restart with a fresh state.
 
-## Attribution
-Project by Ediz Cagan Uysal (1011105590). Solo implementation covering milestones 1–5 with eight easy features.
